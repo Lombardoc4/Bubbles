@@ -1,6 +1,7 @@
 # Bubbles Animation
 
 This is a javascript class that animates orbs to add style to your site.
+
 **[Live Example](https://crislombardo.com "Live Example")**
 
 ## Usage
@@ -30,7 +31,7 @@ This is a javascript class that animates orbs to add style to your site.
 
 ## API
 **init()**
-Starts animation
+<br>Starts animation
 ```
 const bubbleBG = new Bubble();
 bubbleBG.init();
@@ -52,7 +53,7 @@ const bubbleBG = new Bubble();
 bubbleBG.setSizes(['30px', '50px', '80px', '100px', '160px'])
 ```
 **setSpeeds([Array])**
-This is in milliseconds
+<br>This is in milliseconds
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setSpeeds([1200, 1600, 2000, 2400])
@@ -63,19 +64,19 @@ const bubbleBG = new Bubble();
 bubbleBG.setTarget('#home .main.container')
 ```
 **colorArray()**
-returns current color list
+<br>returns current color list
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setColors([...bubbleBG.colorArray(), '#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'])
 ```
 **sizeArray()**
-returns current size list
+<br>returns current size list
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setSizes([...bubbleBG.sizeArray(), '30px', '50px', '80px', '100px', '160px'])
 ```
 **speedArray()**
-returns current speed list
+<br>returns current speed list
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setSpeeds([...bubbleBG.speedArray(), 1200, 1600, 2000, 2400])
