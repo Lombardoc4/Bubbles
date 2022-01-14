@@ -9,23 +9,24 @@ This is a javascript class that animates orbs to add style to your site.
 
 ```html
 <html>
-	...
-	<body>
-		<script type="text/javascript" src="./js/bubbles.min.js"></script>
-		<script>
-			const bubbleBG = new Bubble(); // Initialize with no options
-			bubbleBG.init()
-			or
-			const bubbleBG = new Bubble({
-				colors: ['#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'],
-				sizes: ['30px', '50px', '80px', '100px', '160px'],
-				speeds: [1200, 1600, 2000, 2400],
-				target: '#bubbleBackground',
-				frequency: 300
-			});
-			bubbleBG.init()
-		</script>
-	</body>
+  ...
+    <body>
+      <script type="text/javascript" src="./js/bubbles.min.js"></script>
+      <script>
+        const bubbleBG = new Bubble(); // Initialize with no options
+	bubbleBG.init()
+	or
+	const bubbleBG = new Bubble({
+	  colors: ['#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'],
+	  sizes: ['30px', '50px', '80px', '100px', '160px'],
+	  speeds: [1200, 1600, 2000, 2400],
+	  target: '#bubbleBackground',
+	  frequency: 300
+	});
+	bubbleBG.init()
+      </script>
+     ... 
+   </body>
 </html>
 ```
 
