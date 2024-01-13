@@ -3,7 +3,7 @@ class Bubble {
       this.colors = settings?.colors || [];
       this.sizes = settings?.sizes || [];
       this.speeds = settings?.speeds || [];
-      this.target = settings?.target || '#bubbleBackground';
+      this.target = settings?.target || 'body';
       this.frequency = settings?.frequency || 600;
     }
 
@@ -37,27 +37,29 @@ class Bubble {
 
     #createContainer() {
         const target = document.querySelector(this.target);
+
+        console.log('target', document.body);
+        if (!target) {
+            return false
+        }
         const container = document.createElement('div');
         container.id = 'bubbleBackgroundContainer';
         container.style.position = 'absolute';
         container.style.inset = 0;
 
-        if (!target) {
-            return false
-        }
 
         target.append(container)
         return true;
     }
 
-    blowBubble() {
+    blowBubbles() {
         // Get Bubble Container
         const container = document.getElementById('bubbleBackgroundContainer');
 
         // If no container createone and try again
         if (!container) {
             this.#createContainer();
-            return this.blowBubble();
+            return this.blowBubbles();
         }
 
         const date = new Date();
@@ -109,7 +111,7 @@ class Bubble {
 
         // Start the next bubble
         setTimeout(() => {
-            this.blowBubble();
+            this.blowBubbles();
         }, this.frequency)
     }
   }

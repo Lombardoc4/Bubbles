@@ -1,8 +1,5 @@
 # Bubbles Animation
 
-This is a javascript class that animates orbs to add style to your site.
-
-**[Live Example](https://crislombardo.com "Live Example")**
 
 ## Usage
 **Import this class into your html**
@@ -14,18 +11,18 @@ This is a javascript class that animates orbs to add style to your site.
       <script type="text/javascript" src="./js/bubbles.min.js"></script>
       <script>
         const bubbleBG = new Bubble(); // Initialize with no options
-	bubbleBG.init()
-	or
-	const bubbleBG = new Bubble({
-	  colors: ['#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'],
-	  sizes: ['30px', '50px', '80px', '100px', '160px'],
-	  speeds: [1200, 1600, 2000, 2400],
-	  target: '#bubbleBackground',
-	  frequency: 300
-	});
-	bubbleBG.init()
+		// or
+		const bubbleBG = new Bubble({
+	  	colors: ['#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'],
+	  	sizes: ['30px', '50px', '80px', '100px', '160px'],
+	  	speeds: [1200, 1600, 2000, 2400],
+	  	frequency: 300
+		});
+
+		// Start Animation
+		bubbleBG.blowBubbles()
       </script>
-     ... 
+     ...
    </body>
 </html>
 ```
@@ -37,29 +34,29 @@ This is a javascript class that animates orbs to add style to your site.
 const bubbleBG = new Bubble();
 bubbleBG.init();
 ```
-**setColors([Array])**
+**setColors(hexCode[])**
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setColors(['#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'])
 ```
-**setFrequency(Integer)**
+**setFrequency(int)**
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setFrequency(200)
 ```
 
-**setSizes([Array])**
+**setSizes(string[])**
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setSizes(['30px', '50px', '80px', '100px', '160px'])
 ```
-**setSpeeds([Array])**
+**setSpeeds(int[])**
 <br>This is in milliseconds
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setSpeeds([1200, 1600, 2000, 2400])
 ```
-**setTarget(String)**
+**setTarget(string)**
 ```
 const bubbleBG = new Bubble();
 bubbleBG.setTarget('#home .main.container')
@@ -82,4 +79,3 @@ bubbleBG.setSizes([...bubbleBG.sizeArray(), '30px', '50px', '80px', '100px', '16
 const bubbleBG = new Bubble();
 bubbleBG.setSpeeds([...bubbleBG.speedArray(), 1200, 1600, 2000, 2400])
 ```
-

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script type="text/javascript" src="./bubbles.js"></script>
+    <script defer>
+        //   const bubbleBG = new Bubble(); // Initialize with no options
+        //   bubbleBG.init()
+        //   or
+        const bubbleBG = new Bubble({
+            colors: ['#d1e7dd', '#a3cfbb', '#75b798', '#479f76', '#146c43', '#0f5132'],
+            sizes: ['30px', '50px', '80px', '100px', '160px'],
+            speeds: [1200, 1600, 2000, 2400],
+            frequency: 300
+        });
+        bubbleBG.blowBubbles()
+    </script>
+</body>
+
+</html>
